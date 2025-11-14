@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Environmental Science Research Portfolio - Adneen Khan">
+  <meta name="keywords" content="Environmental Science | Water Quality Research | Community-Based Conservation | Sustainability | Climate Science">
+  <meta name="author" content="Adneen Khan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adneen Khan | Environmental Science Researcher</title>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-green: #2d7a4f;
+      --secondary-green: #4a9b6f;
+      --accent-blue: #3498db;
+      --dark-text: #1a1a1a;
+      --medium-text: #4a4a4a;
+      --light-bg: #fafafa;
+      --white: #ffffffcd;
+      --border-color: #e5e5e5;
+      --light-green-bg: #f8faf9;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-green);
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-green);
+    }
+    
+    /* Firefox Scrollbar */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: var(--primary-green) #f1f1f1;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    
+    /* Professional Navigation */
+    .navbar {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 18px 0;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar.scrolled {
+      padding: 12px 0;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .navbar.scrolled .navbar-brand {
+      color: var(--primary-green) !important;
+    }
+    
+    .navbar.scrolled .nav-link {
+      color: var(--medium-text) !important;
+    }
+    
+    .navbar.scrolled .nav-link:hover {
+      color: var(--primary-green) !important;
+    }
+    
+    .navbar.scrolled .nav-link.active {
+      color: var(--primary-green) !important;
+    }
+    
+    .navbar.scrolled .nav-link::after {
+      background: var(--primary-green);
+    }
+    
+    .navbar .container-fluid {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: white !important;
+      letter-spacing: -0.5px;
+      transition: color 0.3s ease;
+    }
+    
+    .navbar-nav {
+      align-items: center;
+    }
+    
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    .navbar.scrolled .navbar-toggler {
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar.scrolled .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin: 0 8px;
+      padding: 8px 16px !important;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    .nav-link:hover::after {
+      width: 60%;
+    }
+    
+    .nav-link.active {
+      color: white !important;
+      font-weight: 600;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      object-fit: cover;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(14, 27, 19, 0.85), rgba(33, 34, 33, 0.7));
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 0 20px;
+    }
+    
+    .hero-content h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 25px;
+      letter-spacing: -1px;
+      animation: fadeInUp 1s ease;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.4rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      margin: 0 auto 35px;
+      min-height: 45px;
+      animation: fadeInUp 1.2s ease;
+    }
+    
+    .typed-text {
+      color: #ffd700;
+      font-weight: 400;
+    }
+    
+    .hero-btn {
+      background: white;
+      color: var(--primary-green);
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.4s ease;
+      letter-spacing: 0.5px;
+    }
+    
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      color: var(--primary-green);
+      text-decoration: none;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Section Styles */
+    .section {
+      padding: 100px 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    
+    .section-title h2 {
+      font-size: 3rem;
+      color: var(--dark-text);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-green), var(--accent-blue));
+      border-radius: 2px;
+    }
+    
+    .section-title p {
+      color: var(--medium-text);
+      font-size: 1.15rem;
+      margin-top: 25px;
+      font-weight: 300;
+    }
+    
+    .section-label {
+      color: var(--accent-blue);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    
+    /* Consistent Background Colors */
+    .bg-white {
+      background-color: var(--white);
+    }
+    
+    .bg-light-green {
+      background-color: var(--light-green-bg);
+    }
+    
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    
+    .profile-section {
+      text-align: center;
+      position: sticky;
+      top: 100px;
+    }
+    
+    .profile-img {
+      width: 100%;
+      height: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 3px solid var(--primary-green);
+      margin-bottom: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .research-interests {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    
+    .research-interests h5 {
+      color: var(--primary-green);
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+    
+    .research-interests ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .research-interests li {
+      padding: 10px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.9rem;
+      color: var(--medium-text);
+    }
+    
+    .research-interests li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-green);
+      font-weight: bold;
+    }
+    
+    .about-text {
+      background: white;
+      border-radius: 15px;
+      padding: 45px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .about-text p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: var(--medium-text);
+    }
+    
+    .about-text strong {
+      color: var(--dark-text);
+      font-weight: 600;
+    }
+    
+    .about-text em {
+      color: var(--primary-green);
+      font-style: italic;
+    }
+    
+    .btn-custom {
+      display: inline-block;
+      background: var(--primary-green);
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 500;
+      text-decoration: none;
+      margin: 10px 10px 0 0;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    
+    .btn-custom:hover {
+      background: var(--secondary-green);
+      color: white;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(45, 122, 79, 0.3);
+    }
+    
+    .btn-outline-custom {
+      background: transparent;
+      border: 2px solid var(--primary-green);
+      color: var(--primary-green);
+    }
+    
+    .btn-outline-custom:hover {
+      background: var(--primary-green);
+      color: white;
+    }
+    
+    /* Project Cards */
+    .project-grid {
+      display: grid;
+      gap: 80px;
+    }
+    
+    .project-card {
+      display: grid;
+      grid-template-columns: 400px 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    
+    .project-card:nth-child(even) {
+      grid-template-columns: 1fr 400px;
+    }
+    
+    .project-card:nth-child(even) .project-image {
+      order: 2;
+    }
+    
+    .project-image {
+      height: 400px;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(45, 122, 79, 0.25);
+      transition: transform 0.4s ease;
+    }
+    
+    .project-card:hover .project-image {
+      transform: translateY(-10px);
+    }
+    
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .project-content {
+      padding: 0;
+    }
+    
+    .project-title {
+      font-size: 1.9rem;
+      color: var(--dark-text);
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+    
+    .project-meta {
+      color: var(--primary-green);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 25px;
+    }
+    
+    .project-highlights {
+      background: linear-gradient(135deg, #f8faf9, #f0f8f5);
+      padding: 25px;
+      border-radius: 15px;
+      margin: 25px 0;
+      border-left: 4px solid var(--primary-green);
+    }
+    
+    .badge-custom {
+      display: inline-block;
+      background: var(--primary-green);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-size: 0.85rem;
+      margin: 5px 8px 5px 0;
+      font-weight: 500;
+      transition: transform 0.3s ease;
+    }
+    
+    .badge-custom:hover {
+      transform: translateY(-2px);
+    }
+    
+    .project-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: var(--medium-text);
+    }
+    
+    /* Media Section */
+    .media-grid {
+      display: grid;
+      gap: 50px;
+    }
+    
+    /* Daily Star Featured Article */
+    .media-featured {
+      display: grid;
+      grid-template-columns: 450px 1fr;
+      gap: 40px;
+      align-items: start;
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+    
+    .media-featured-image {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .media-featured-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    
+    .media-featured:hover .media-featured-image img {
+      transform: scale(1.05);
+    }
+    
+    .media-featured-content h4 {
+      color: var(--dark-text);
+      margin-bottom: 12px;
+      font-size: 1.8rem;
+    }
+    
+    .media-label {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+    
+    .media-meta {
+      color: var(--medium-text);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    
+    .media-featured-content p {
+      color: var(--medium-text);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    
+    /* Fieldwork Gallery */
+    .media-fieldwork {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .media-fieldwork h4 {
+      color: var(--dark-text);
+      margin-bottom: 12px;
+      font-size: 1.6rem;
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin: 25px 0;
+    }
+    
+    .gallery-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    
+    /* Publications */
+    .publication-list {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .publication-category {
+      margin-bottom: 50px;
+    }
+    
+    .publication-category h4 {
+      color: var(--primary-green);
+      margin-bottom: 30px;
+      font-size: 1.6rem;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--border-color);
+    }
+    
+    .publication-item {
+      background: white;
+      padding: 25px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-blue);
+    }
+    
+    .publication-item p {
+      margin: 0;
+      line-height: 1.8;
+      color: var(--medium-text);
+    }
+    
+    /* Experience Cards */
+    .experience-card {
+      background: white;
+      border-left: 4px solid var(--primary-green);
+      padding: 35px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      gap: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .experience-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+    
+    .experience-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    
+    .experience-content h4 {
+      color: var(--dark-text);
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    
+    .experience-org {
+      color: var(--primary-green);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .experience-content p {
+      color: var(--medium-text);
+      line-height: 1.8;
+    }
+    
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+    
+    .skill-category {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .skill-icon {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .skill-icon i {
+      font-size: 40px;
+      color: var(--primary-green);
+    }
+    
+    .skill-category h5 {
+      color: var(--primary-green);
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    
+    .skill-category ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .skill-category li {
+      padding: 10px 0;
+      padding-left: 25px;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--medium-text);
+    }
+    
+    .skill-category li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary-green);
+      font-weight: bold;
+    }
+    
+    /* Testimonials Section */
+    .testimonials-section {
+      background: linear-gradient(135deg, #5a5a5a, #3a3a3a);
+      color: white;
+      padding: 100px 40px;
+    }
+    
+    .testimonials-section .section-title h2 {
+      color: white;
+    }
+    
+    .testimonials-section .section-title h2::after {
+      background: linear-gradient(90deg, white, var(--accent-blue));
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .testimonial-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 35px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+    
+    .testimonial-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .testimonial-content h4 {
+      font-size: 1.4rem;
+      margin-bottom: 5px;
+      color: white;
+    }
+    
+    .testimonial-title {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+    
+    .testimonial-text {
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      font-style: italic;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+      color: white;
+      padding: 100px 40px;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .contact-card {
+      background: rgba(255,255,255,0.12);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .contact-card h4 {
+      margin-bottom: 25px;
+      font-size: 1.5rem;
+    }
+    
+    .contact-card p {
+      line-height: 1.9;
+      font-size: 1.05rem;
+    }
+    
+    .social-links {
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .social-links a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      margin: 8px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .social-links a:hover {
+      background: white;
+      color: var(--primary-green);
+      transform: translateY(-5px);
+      border-color: white;
+    }
+    
+    /* Footer */
+    .footer {
+      background: #1a3a2e;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+    .footer p {
+      margin: 8px 0;
+    }
+    
+    /* Back to Top */
+    #backToTop {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background: var(--primary-green);
+      color: white;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 1000;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    #backToTop:hover {
+      background: var(--secondary-green);
+      transform: translateY(-5px);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .section {
+        padding: 80px 30px;
+      }
+      
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-card {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-card:nth-child(even) {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-card:nth-child(even) .project-image {
+        order: 0;
+      }
+    }
+    
+    @media (max-width: 968px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2.2rem;
+      }
+      
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .profile-section {
+        position: static;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonial-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .testimonial-image {
+        margin: 0 auto;
+      }
+      
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .experience-card {
+        flex-direction: column;
+      }
+      
+      .navbar .container-fluid {
+        padding: 0 20px;
+      }
+      
+      .media-featured {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .section {
+        padding: 60px 20px;
+      }
+      
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      
+      .project-image {
+        height: 300px;
+      }
+    }
+    
+    /* Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#home">ADNEEN ECOS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+        <li class="nav-item"><a class="nav-link" href="#media">Media</a></li>
+        <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="images/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Adneen Ahmed Khan</h1>
+    <p class="hero-subtitle"><span class="typed-text"></span></p>
+    <a href="#about" class="hero-btn">Explore My Research</a>
+  </div>
+</section>
+
+<!-- About Section - WHITE -->
+<section id="about" class="section bg-white">
+  <div class="section-title fade-in">
+    <h2>About Me</h2>
+    <p>If you are interested in my work or potential collaboration, I would be happy to connect and explore opportunities together.</p>
+  </div>
+  
+  <div class="about-content fade-in">
+    <div class="profile-section">
+      <img src="images/adneen.png" alt="Adneen Khan" class="profile-img">
+      <div class="research-interests">
+        <h5>Research & Project Background</h5>
+        <ul>
+          <li>Community-Based Conservation</li>
+          <li>Water Quality & Restoration</li>
+          <li>Participatory Action Research</li>
+          <li>Traditional Ecological Knowledge</li>
+          <li>Environmental Justice</li>
+          <li>Climate Data Accessibility</li>
+        </ul>
+      </div>
+    </div>
+    
+<div class="about-text">
+  <p>I am a student researcher committed to environmental science with a focus on community-based conservation and water protection. I study at Notre Dame College in Dhaka, and my work brings together scientific methods, traditional ecological knowledge, and the real voices of communities who live closest to environmental change.</p>
+  
+  <p>My interest began in my hometown of Katashur, where I watched the Buriganga River shift from a healthy waterway into a polluted and harmful ecosystem. Seeing this transformation, and hearing a young boy ask why the same water that once supported his village now made people sick, shaped my purpose. It raised a question that guides my work: <em>How can local communities lead restoration efforts through both their knowledge and scientific tools?</em></p>
+  
+  <p>To explore this question, I created the <strong>Katashur Water Protection Initiative</strong>. Working with families, elders, and students, our team tested water, mapped pollution sources, and designed simple community-led solutions. Over 18 months, water quality improved by about 30 percent, and eight surrounding communities adopted our model for their own river restoration efforts.</p>
+  
+  <p>A central part of my approach is ensuring that research is carried out <strong>with</strong> communities rather than <strong>on</strong> them. Our Water Guardians program blends traditional ways of reading the river with scientific monitoring tools. Through shared learning and local leadership, we show how meaningful and lasting environmental change grows from within the community itself.</p>
+  
+  <div style="margin-top: 30px;">
+
+        <a href="mailto:adneen.ahmed415@gmail.com" class="btn-custom">
+          <i class="fa fa-envelope"></i> Email Me
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research Projects Section - LIGHT GREEN -->
+<section id="research" class="section bg-light-green">
+  <div class="section-title fade-in">
+    <h2>Research Projects</h2>
+    <p>Community-driven environmental science and conservation research</p>
+  </div>
+  
+  <div class="project-grid">
+    <!-- Project 1 -->
+    <div class="project-card fade-in">
+      <div class="project-image">
+        <img src="images/water-project.jpg" alt="Katashur Water Protection Initiative" class="project-img">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Katashur Water Protection Initiative: A Participatory Framework for Riverine Restoration</h3>
+        <div class="project-meta">Student Researcher & Notre Dame Ecospace Club Ambassador | 2022-Present</div>
+        
+        <div class="project-highlights">
+          <strong>Key Achievements:</strong>
+          <div style="margin-top: 15px;">
+            <span class="badge-custom">30% Water Quality Improvement</span>
+            <span class="badge-custom">8 Communities Adopted Model</span>
+            <span class="badge-custom">400% Increased Participation</span>
+            <span class="badge-custom">Harvard Partnership</span>
+          </div>
+        </div>
+        
+        <p><strong>Story:</strong> This project is one of the most meaningful experiences of my life. I first started working with professors at Notre Dame College and members of our environmental club, where I met researchers studying pollution in the Buriganga River. Listening to their stories and seeing their data opened my eyes to how deeply the river shaped people's lives. Later, our team received an email from a Harvard professor who wanted help designing a learning program for villagers living along the Buriganga. That moment made me realize that environmental science can connect communities across the world. Since then, I have continued this work and now conduct research under Professor James S. Kim, focusing on how local people and scientific tools can work together to protect the environment.</p>
+        
+        <p><strong>Research Question:</strong> Can community-led conservation models improve water quality in measurable ways while also preserving the traditional ecological knowledge that communities already hold?</p>
+        
+        <p><strong>Methodology:</strong> Mixed-methods participatory action research that brings together two approaches: collecting scientific water-quality data and learning directly from the stories, observations, and daily experiences of community members.</p>
+        
+        <p><strong>Status:</strong> Manuscript in preparation for <em>Environmental Science and Policy</em>.</p>
+      </div>
+    </div>
+    
+    <!-- Project 2 -->
+    <div class="project-card fade-in">
+      <div class="project-image">
+        <img src="images/ecolens-project.jpg" alt="EcoLens Project" class="project-img">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">EcoLens: Inclusive Climate Data Visualization for Visually Impaired Students</h3>
+        <div class="project-meta">Laboratory Assistant | 2023-Present</div>
+        
+        <div class="project-highlights">
+          <strong>Innovation Highlights:</strong>
+          <div style="margin-top: 15px;">
+            <span class="badge-custom">Audio Sonification</span>
+            <span class="badge-custom">Haptic Feedback</span>
+            <span class="badge-custom">Screen Reader Optimized</span>
+            <span class="badge-custom">Co-Creation Design</span>
+          </div>
+        </div>
+
+        <p><strong>Story:</strong> EcoLens began when I was tutoring visually impaired students in basic climate science. Many of them told me that climate graphs, maps, and charts felt "invisible" to them. That moment pushed me to create a tool that did not rely only on vision. Working with these students, I started designing a system where climate data could be heard, felt, and explored through accessible technology. This project made me realize that accessibility is not a side feature; it is something you build with the learners themselves.</p>
+
+        <p><strong>Research Question:</strong> How can participatory design principles create accessible climate science tools that serve diverse learning communities?</p>
+        
+        <p><strong>Innovation:</strong> First climate data accessibility tool designed through co-creation with the students who would use it, blending audio cues, haptic feedback, and screen reader optimization.</p>
+        
+        <p><strong>Status:</strong> In beta testing; preparing demonstration for ACM ASSETS Conference.</p>
+      </div>
+    </div>
+    
+    <!-- Project 3 -->
+    <div class="project-card fade-in">
+      <div class="project-image">
+        <img src="images/health-project.jpg" alt="Environmental Health Research" class="project-img">
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Environmental Degradation & Public Health Outcomes in Rural Bangladesh</h3>
+        <div class="project-meta"> Student Research Assistant | Medical Mission Collaboration | 2023</div>
+        
+        <p><strong>Research Question:</strong> What are the direct pathways through which riverine pollution manifests as community health crises?</p>
+        
+        <p><strong>Fieldwork:</strong> 5 rural health camps organized across affected regions; collaboration with Dhaka Medical College Hospital. Conducted patient interviews (n=300+) while monitoring local water and air quality indicators.</p>
+        
+        <p><strong>Preliminary Findings:</strong> Strong correlation between proximity to contaminated water sources and increased incidence of waterborne illnesses, skin conditions, and respiratory complications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Media Section - WHITE -->
+<section id="media" class="section bg-white">
+  <div class="section-title fade-in">
+    <div class="section-label">Media Coverage</div>
+    <h2>Stories from the Field</h2>
+    <p>Public recognition and documentation of community-led conservation work</p>
+  </div>
+  
+  <div class="media-grid">
+    <!-- Daily Star Featured Article -->
+    <div class="media-featured fade-in">
+      <div class="media-featured-image">
+        <img src="images/article_image.jpg" alt="The Daily Star Feature">
+      </div>
+      <div class="media-featured-content">
+        <span class="media-label">Featured Coverage</span>
+        <h4>Katashur Fights Back</h4>
+        <div class="media-meta">The Daily Star | August 13, 2023</div>
+        <p>Featured coverage of the Katashur Water Protection Initiative in Bangladesh's leading English-language newspaper. The article chronicles the community's transformation from environmental despair to active restoration, highlighting the Water Guardian model and measurable improvements in river health.</p>
+      </div>
+    </div>
+    
+    <!-- Fieldwork Chronicles -->
+    <div class="media-fieldwork fade-in">
+      <h4>Fieldwork Chronicles</h4>
+      <div class="media-meta">Katashur, Buriganga River | 2022–2024</div>
+      <div class="gallery-grid">
+        <img src="images/IMG-20251111-WA0049.jpg" alt="KWPI Team" class="gallery-img">
+        <img src="images/FB_IMG_1762855299445.jpg" alt="Community Cleanup" class="gallery-img">
+        <img src="images/FB_IMG_1762855307813.jpg" alt="River Restoration" class="gallery-img">
+        <img src="images/FB_IMG_1762855318905.jpg" alt="Water Guardians" class="gallery-img">
+      </div>
+      <p style="color: var(--medium-text); line-height: 1.8; margin-top: 20px;">These images document Water Guardian teams engaged in river restoration work—clearing debris, removing pollutants, and monitoring water quality. Each photograph represents the core philosophy of this research: that lasting environmental change emerges from community action, not external intervention.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Publications Section - LIGHT GREEN -->
+<section id="publications" class="section bg-light-green">
+  <div class="section-title fade-in">
+    <div class="section-label">Academic Work</div>
+    <h2>Publications & Presentations</h2>
+    <p>Peer-reviewed research and scholarly contributions</p>
+  </div>
+  
+  <div class="publication-list">
+    <div class="publication-category fade-in">
+      <h4>Manuscripts in Preparation</h4>
+      <div class="publication-item">
+        <p>Kim, J., Rahman, M., Hossain, S., <strong>Khan, A.</strong>, et al. (In Prep). "Community-Led Water Restoration: A Participatory Framework for Riverine Conservation in Bangladesh." Target: <em>Environmental Science & Policy</em>.</p>
+      </div>
+      <div class="publication-item">
+        <p>Rahman, S., Islam, T., Chowdhury, N., Ahmed, R., <strong>Khan, A.</strong> (In Prep). "Environmental Degradation and Public Health: A Mixed-Methods Study from Rural Bangladesh." Target: <em>Environmental Health Perspectives</em>.</p>
+      </div>
+      <div class="publication-item">
+        <p>Ahmed, F., Das, P., Roy, S., <strong>Khan, A.</strong> (In Prep). "Beyond Data Points: Integrating Traditional Ecological Knowledge in Contemporary Water Quality Assessment." Target: <em>Ecology and Society</em>.</p>
+      </div>
+    </div>
+    
+    <div class="publication-category fade-in">
+      <h4>Conference Presentations</h4>
+      <div class="publication-item">
+        <p><strong>Khan, A.</strong>, Kim, J., Rahman, M. (2024). "The Katashur Water Protection Initiative: When Communities Lead Conservation." <em>Urban Sustainability Forum</em>. [Featured Research Presentation]</p>
+      </div>
+      <div class="publication-item">
+        <p><strong>Khan, A.</strong>, Islam, K. (2024). "EcoLens: Participatory Design for Accessible Climate Science." <em>ACM ASSETS Conference</em>. [Submitted]</p>
+      </div>
+    </div>
+    
+    <div class="publication-category fade-in">
+      <h4>Technical Reports & White Papers</h4>
+      <div class="publication-item">
+        <p><strong>Khan, A.</strong>, Eco and Space Club Team (2024). "Water Guardians Training Manual: Integrating Traditional Knowledge with Scientific Monitoring." Notre Dame Eco and Space Club Publications.</p>
+      </div>
+      <div class="publication-item">
+        <p><strong>Khan, A.</strong> (2023). "Environmental Leadership in Student Governance: A Case Study." Notre Dame Student Government Association.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section - WHITE -->
+<section id="experience" class="section bg-white">
+  <div class="section-title fade-in">
+    <h2>Research Experience</h2>
+  </div>
+  
+  <div class="experience-card fade-in">
+    <div class="experience-icon">
+      <i class="fa fa-flask"></i>
+    </div>
+    <div class="experience-content">
+      <h4>Student Researcher & Notre Dame Ecospace Club Ambassador</h4>
+      <p class="experience-org">Katashur Water Protection Initiative | 2022-Present</p>
+      <p>Lead researcher for community-based water restoration project. Designed research protocols, managed field operations, coordinated with local stakeholders, and supervised Water Guardian training programs. Partnership development with Harvard University research lab.</p>
+    </div>
+  </div>
+  
+  <div class="experience-card fade-in">
+    <div class="experience-icon">
+      <i class="fa fa-flask"></i>
+    </div>
+    <div class="experience-content">
+      <h4>Laboratory Assistant</h4>
+      <p class="experience-org">Notre Dame College Dhaka - Science Laboratory | 2022-2024</p>
+      <p>Assisted in basic laboratory procedures including water quality testing, pH analysis, and sample preparation. Maintained laboratory equipment, followed safety protocols, and supported senior researchers with data collection and record-keeping.</p>
+    </div>
+  </div>
+  
+  <div class="experience-card fade-in">
+    <div class="experience-icon">
+      <i class="fa fa-bar-chart"></i>
+    </div>
+    <div class="experience-content">
+      <h4>Research Intern - Data Analysis</h4>
+      <p class="experience-org">Grad Bunker | Summer 2023</p>
+      <p>Conducted quantitative research across 10+ projects involving complex dataset analysis. Applied computational methods to environmental and financial data, improved analytical accuracy by 20%.</p>
+    </div>
+  </div>
+  
+  <div class="experience-card fade-in">
+    <div class="experience-icon">
+      <i class="fa fa-users"></i>
+    </div>
+    <div class="experience-content">
+      <h4>Club President</h4>
+      <p class="experience-org">Notre Dame Eco and Space Club | 2021-Present</p>
+      <p>Founded and direct longitudinal research study on community behavioral change regarding plastic waste and recycling. Managed 1,000+ participant study, achieved 65% increase in sustained recycling behaviors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section - LIGHT GREEN -->
+<section class="section bg-light-green">
+  <div class="section-title fade-in">
+    <h2>Research Skills & Competencies</h2>
+  </div>
+  
+  <div class="skills-grid">
+    <div class="skill-category fade-in">
+      <div class="skill-icon">
+        <i class="fa fa-flask"></i>
+      </div>
+      <h5>Research Methodologies</h5>
+      <ul>
+        <li>Participatory Action Research</li>
+        <li>Mixed-Methods Design</li>
+        <li>Ethnographic Fieldwork</li>
+        <li>Longitudinal Study Design</li>
+        <li>Community-Based Research</li>
+      </ul>
+    </div>
+    
+    <div class="skill-category fade-in">
+      <div class="skill-icon">
+        <i class="fa fa-microscope"></i>
+      </div>
+      <h5>Laboratory Skills</h5>
+      <ul>
+        <li>Basic Laboratory Techniques</li>
+        <li>Water Quality Testing</li>
+        <li>pH Analysis</li>
+        <li>Sample Collection</li>
+        <li>Laboratory Safety Protocols</li>
+      </ul>
+    </div>
+    
+    <div class="skill-category fade-in">
+      <div class="skill-icon">
+        <i class="fa fa-bar-chart"></i>
+      </div>
+      <h5>Data Analysis</h5>
+      <ul>
+        <li>Basic Python Programming</li>
+        <li>Excel & Google Sheets</li>
+        <li>Data Visualization</li>
+        <li>Statistical Basics</li>
+        <li>Survey Data Analysis</li>
+      </ul>
+    </div>
+    
+    <div class="skill-category fade-in">
+      <div class="skill-icon">
+        <i class="fa fa-users"></i>
+      </div>
+      <h5>Field Research</h5>
+      <ul>
+        <li>Community Engagement</li>
+        <li>Environmental Monitoring</li>
+        <li>Survey Design</li>
+        <li>Participant Observation</li>
+        <li>Field Site Management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Awards Section - WHITE -->
+<section class="section bg-white">
+  <div class="section-title fade-in">
+    <h2>Awards & Recognition</h2>
+  </div>
+  
+  <div class="skills-grid" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="skill-category fade-in">
+      <h5><i class="fa fa-trophy"></i> Environmental Leadership Award</h5>
+      <p style="color: var(--medium-text); margin-top: 10px;"><strong>Notre Dame Eco and Space Club, 2024</strong><br>For innovative community-based conservation initiatives and leadership in environmental advocacy</p>
+    </div>
+    
+    <div class="skill-category fade-in">
+      <h5><i class="fa fa-microphone"></i> Featured Research Presentation</h5>
+      <p style="color: var(--medium-text); margin-top: 10px;"><strong>Urban Sustainability Forum, 2024</strong><br>Selected as featured presentation for Katashur Water Protection Initiative research</p>
+    </div>
+    
+    <div class="skill-category fade-in">
+      <h5><i class="fa fa-handshake-o"></i> Harvard University Research Partnership</h5>
+      <p style="color: var(--medium-text); margin-top: 10px;"><strong>Professor Kim's Lab, 2023-Present</strong><br>Selected for collaborative research partnership on community-based learning design</p>
+    </div>
+    
+    <div class="skill-category fade-in">
+      <h5><i class="fa fa-heart"></i> Community Service Recognition</h5>
+      <p style="color: var(--medium-text); margin-top: 10px;"><strong>WeSafe Organization, 2023</strong><br>Acknowledged for outstanding service supporting vulnerable community members</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section - DARK GRADIENT (SPECIAL) -->
+<section id="testimonials" class="testimonials-section">
+  <div class="section-title fade-in">
+    <h2 style="color: white;">Testimonials</h2>
+    <p>What colleagues and mentors say about my work</p>
+  </div>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <img src="images/tapash.jpg" alt="Mr. Tapash Saha" class="testimonial-image">
+      <div class="testimonial-content">
+        <h4>Mr. Tapash Saha</h4>
+        <p class="testimonial-title">Lecturer, Mathematics</p>
+        <p class="testimonial-text">"Adneen's direction towards STEM is revelatory. He effortlessly navigated the complexities of the problem and brought to life a unique blend of strategy and solution. His vision and dedication to problem-solving are truly exceptional."</p>
+      </div>
+    </div>
+    
+    <div class="testimonial-card fade-in">
+      <img src="images/nazmul.jpg" alt="Md. Nazmul Hassan" class="testimonial-image">
+      <div class="testimonial-content">
+        <h4>Md. Nazmul Hassan</h4>
+        <p class="testimonial-title">Lecturer, Biology</p>
+        <p class="testimonial-text">"Adneen is a master of the 'Never Give Up' philosophy. His ability to create an atmosphere of hard work without tension is nothing short of remarkable. Collaborating with him on the Notre Dame Eco And Space Club Projects was a thrilling experience, and his critical thinking skills are second to none."</p>
+      </div>
+    </div>
+    
+    <div class="testimonial-card fade-in">
+      <img src="images/ishrak.jpg" alt="Ishrak Zaman" class="testimonial-image">
+      <div class="testimonial-content">
+        <h4>Ishrak Zaman</h4>
+        <p class="testimonial-title">Dikinson College'26</p>
+        <p class="testimonial-text">"Adneen's attention to detail and understanding of data analytics are exceptional. Gradbunker Internship project was a collaborative triumph, and Adneen's ability to create the perfect noir tool for students and teachers was both inspiring and captivating."</p>
+      </div>
+    </div>
+    
+    <div class="testimonial-card fade-in">
+      <img src="images/seho.jpg" alt="Se Ho Kwak" class="testimonial-image">
+      <div class="testimonial-content">
+        <h4>Se Ho Kwak</h4>
+        <p class="testimonial-title">Assistant Professor of Economics</p>
+        <p class="testimonial-text">"Working with Adneen on Finan-Ai was a spine-tingling journey of creativity in the world of accounting & Education. His young eye for detail and his commitment to crafting the right aesthetics for the tool were instrumental in making the accounting software a gripping visual experience. Adneen was a great mentee who truly knows how to set the stage for creativity."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section - GREEN GRADIENT (SPECIAL) -->
+<section id="contact" class="contact-section">
+  <div class="section-title fade-in" style="color: white;">
+    <h2 style="color: white;">Contact & Collaboration</h2>
+    <p>Let's work together on environmental conservation research</p>
+  </div>
+  
+  <div class="contact-grid">
+    <div class="contact-card fade-in">
+      <h4><i class="fa fa-envelope"></i> Research Inquiries</h4>
+      <p>I welcome inquiries about research collaboration, speaking engagements, and partnership opportunities in community-based conservation work.</p>
+      <p style="margin-top: 25px;">
+        <strong>Email:</strong> adneen.ahmed415@gmail.com<br>
+        <strong>Institution:</strong> Notre Dame College, Dhaka<br>
+        <strong>Location:</strong> Dhaka, Bangladesh
+      </p>
+    </div>
+    
+    <div class="contact-card fade-in">
+      <h4><i class="fa fa-lightbulb-o"></i> Current Research Focus</h4>
+      <p>→ Community-based water restoration models<br>
+      → Participatory science methodologies<br>
+      → Environmental justice in Global South contexts<br>
+      → Traditional ecological knowledge integration<br>
+      → Accessible climate science tools</p>
+    </div>
+  </div>
+  
+  <div class="social-links fade-in">
+    <h4 style="margin-bottom: 25px; font-size: 1.5rem;">Connect With Me</h4>
+    <div>
+      <a href="mailto:adneen.ahmed415@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div>
+    <p style="margin-bottom: 10px; font-size: 1.1rem;"><strong>Adneen Ahmed Khan</strong></p>
+    <p style="margin-bottom: 5px;">Environmental Science | Notre Dame College, Dhaka</p>
+    <p style="margin-top: 25px; font-size: 0.9rem; opacity: 0.7;">© 2025 Adneen Khan. Website designed for academic and research purposes.</p>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<div id="backToTop">
+  <i class="fa fa-chevron-up"></i>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+<script>
+// Typing animation
+var typed = new Typed('.typed-text', {
+  strings: [
+    'Environmental Science & Conservation',
+    'Community-Based Water Restoration',
+    'Participatory Research & Action',
+    'Bridging Science & Traditional Knowledge'
+  ],
+  typeSpeed: 60,
+  backSpeed: 40,
+  backDelay: 2000,
+  startDelay: 500,
+  loop: true,
+  showCursor: true,
+  cursorChar: '|'
+});
+
+// Smooth scrolling
+$('a[href^="#"]').on('click', function(event) {
+  var target = $(this.getAttribute('href'));
+  if(target.length) {
+    event.preventDefault();
+    $('html, body').stop().animate({
+      scrollTop: target.offset().top - 80
+    }, 1000);
+  }
+});
+
+// Navbar on scroll
+$(window).scroll(function() {
+  if($(this).scrollTop() > 50) {
+    $('.navbar').addClass('scrolled');
+  } else {
+    $('.navbar').removeClass('scrolled');
+  }
+  
+  // Back to top button
+  if($(this).scrollTop() > 300) {
+    $('#backToTop').fadeIn();
+  } else {
+    $('#backToTop').fadeOut();
+  }
+  
+  // Active nav link
+  var scrollPos = $(document).scrollTop() + 100;
+  $('.nav-link').each(function() {
+    var currLink = $(this);
+    var refElement = $(currLink.attr("href"));
+    if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      $('.nav-link').removeClass("active");
+      currLink.addClass("active");
+    } else {
+      currLink.removeClass("active");
+    }
+  });
+});
+
+// Back to top click
+$('#backToTop').click(function() {
+  $('html, body').animate({scrollTop: 0}, 1000);
+});
+
+// Fade-in animation
+$(window).scroll(function() {
+  $('.fade-in').each(function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    
+    if(elementBottom > viewportTop && elementTop < viewportBottom) {
+      $(this).addClass('visible');
+    }
+  });
+});
+
+// Trigger on load
+$(document).ready(function() {
+  $(window).trigger('scroll');
+});
+</script>
+
+</body>
+</html>
